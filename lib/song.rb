@@ -47,7 +47,7 @@ class Song
   end
   
   def self.new_from_filename(mp3_data)
-    rows = mp3_data.split(/- |.mp3/) # ["Taylor Swift ", " Blank Space"]
+    rows = mp3_data.split(/- |.mp3/)
     name = rows[1]
     artist_n = rows[0]
     
