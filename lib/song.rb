@@ -45,5 +45,16 @@ class Song
     sorted = all.sort {|a, b| a.name <=> b.name}
     sorted
   end
+  
+  def self.new_from_filename(mp3_data)
+    rows = mp3_data.split(/- |.mp3/) # ["Taylor Swift ", " Blank Space"]
+    name = rows[1]
+    artist_n = rows[0]
+    
+    song = self.new 
+    song.name = name 
+    song.artist_name = artist_n
+    song 
+  end
 
 end
